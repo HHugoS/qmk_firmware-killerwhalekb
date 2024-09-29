@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // 天面スイッチ
         KC_EQL,  KC_6, KC_7, KC_8,    KC_9,    KC_0,
         KC_RBRC, KC_Y, KC_U, KC_I,    KC_O,    KC_P,
-        KC_QUOT, KC_H, KC_J, KC_K,    KC_L,    KC_SLSH,
+        KC_QUOT, KC_H, KC_J, KC_K,    KC_L,    LT(_MOUSE, KC_SLSH),
         KC_DOT,  KC_B, KC_N, KC_M,    KC_GRV,
                              KC_BSLS,
         // 側面スイッチ
@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // 天面スイッチ
         KC_EQL,  KC_6, KC_7, KC_8,    KC_9,    KC_0,
         KC_RBRC, KC_Y, KC_U, KC_I,    KC_O,    KC_P,
-        KC_QUOT, KC_H, KC_J, KC_K,    KC_L,    KC_SLSH,
+        KC_QUOT, KC_H, KC_J, KC_K,    KC_L,    LT(_MOUSE, KC_SLSH),
         KC_DOT,  KC_B, KC_N, KC_M,    KC_GRV,
                              KC_BSLS,
         // 側面スイッチ
@@ -239,6 +239,9 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     },
 };
 
+//小指で押している間マウスレイヤーに切り替え
+
+
 //日本語キーに変換
 const key_override_t at_key_override = ko_make_with_layers(MOD_MASK_SHIFT, KC_2, JP_AT, 1<<_JP);  //Shift 2 -> @
 const key_override_t circ_key_override = ko_make_with_layers(MOD_MASK_SHIFT, KC_6, JP_CIRC, 1<<_JP); //Shift 6 -> ^
@@ -262,7 +265,7 @@ const key_override_t grv_key_override = ko_make_with_layers_and_negmods(0, KC_GR
 const key_override_t tild_key_override = ko_make_with_layers(MOD_MASK_SHIFT, KC_GRV, JP_TILD, 1<<_JP); //Shift `
 const key_override_t lang_key_override = ko_make_with_layers(MOD_MASK_ALT, KC_GRV, JP_ZKHK, 1<<_JP); //Alt Grave
 
-const key_override_t **key_overrides = (const key_override_t *[]){
+const key_override_t *key_overrides[] = {
     &at_key_override,
     &circ_key_override,
     &ampr_key_override,
@@ -284,5 +287,4 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     &grv_key_override,
     &tild_key_override,
     &lang_key_override,
-    NULL
 };
