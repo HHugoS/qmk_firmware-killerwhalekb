@@ -119,8 +119,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // 右手
         // 天面スイッチ
            _______,    _______,    _______, _______, _______, MO(_BALL_SETTINGS),
-           XXXXXXX,    XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-          MOD_SCRL, KC_MS_BTN1, KC_MS_BTN2, XXXXXXX, XXXXXXX, XXXXXXX,
+           XXXXXXX,    XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX,            XXXXXXX,
+          MOD_SCRL, KC_MS_BTN1, KC_MS_BTN2, XXXXXXX, XXXXXXX,         MO(_MOUSE),
         KC_MS_BTN3, KC_MS_BTN4, KC_MS_BTN5, XXXXXXX, XXXXXXX,
                                                      XXXXXXX,
         // 側面スイッチ
@@ -128,7 +128,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // 十字キーorジョイスティック                // ジョイスティックスイッチ
         _______, _______, _______, _______,          _______,
         // 追加スイッチ                             // トグルスイッチ
-        _______, _______,                            _______
+        _______, _______,                            MO(_MOUSE)
     ),
     [_BALL_SETTINGS] = LAYOUT(
         // 左手
