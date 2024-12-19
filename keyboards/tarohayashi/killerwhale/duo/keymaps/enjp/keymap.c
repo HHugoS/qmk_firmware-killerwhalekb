@@ -264,6 +264,7 @@ const key_override_t dquo_key_override = ko_make_with_layers(MOD_MASK_SHIFT, KC_
 const key_override_t grv_key_override = ko_make_with_layers_and_negmods(0, KC_GRV, JP_GRV, 1<<_JP, (uint8_t) MOD_MASK_SHIFT); //`
 const key_override_t tild_key_override = ko_make_with_layers(MOD_MASK_SHIFT, KC_GRV, JP_TILD, 1<<_JP); //Shift `
 const key_override_t lang_key_override = ko_make_with_layers(MOD_MASK_ALT, KC_GRV, JP_ZKHK, 1<<_JP); //Alt Grave
+const key_override_t at_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);  //Shift BSPC -> Del
 
 const key_override_t *key_overrides[] = {
     &at_key_override,
