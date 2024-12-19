@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // 十字キーorジョイスティック                // ジョイスティックスイッチ
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX,
         // 追加スイッチ                             // トグルスイッチ
-        KC_SPC, KC_DEL,                           MO(_MOUSE)
+        KC_SPC, KC_BSPC,                           MO(_MOUSE)
     ),
     [_JP] = LAYOUT(
         // 左手
@@ -70,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // 十字キーorジョイスティック                // ジョイスティックスイッチ
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX,
         // 追加スイッチ                             // トグルスイッチ
-        KC_SPC, KC_DEL,                           MO(_MOUSE)
+        KC_SPC, KC_BSPC,                           MO(_MOUSE)
     ),
     [_FN] = LAYOUT(
         // 左手
